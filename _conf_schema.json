@@ -1,0 +1,79 @@
+{
+  "halo_url": {
+    "type": "string",
+    "description": "Halo 站点地址",
+    "hint": "例如：https://blog.example.com，请勿填写末尾的 /console。",
+    "obvious_hint": true,
+    "default": ""
+  },
+  "api_token": {
+    "type": "string",
+    "description": "Halo 个人访问令牌（PAT）",
+    "hint": "令牌需要瞬间管理和附件管理权限。配置文件中会以明文保存，请妥善保护。",
+    "obvious_hint": true,
+    "default": ""
+  },
+  "visibility": {
+    "type": "string",
+    "description": "默认可见性",
+    "options": ["PUBLIC", "PRIVATE"],
+    "default": "PUBLIC"
+  },
+  "default_tags": {
+    "type": "list",
+    "description": "默认标签",
+    "hint": "每一项填写一个标签。",
+    "default": []
+  },
+  "storage_policy_name": {
+    "type": "string",
+    "description": "附件存储策略名称",
+    "hint": "填写 Halo Policy 的 metadata.name。留空时仅在站点只有一个存储策略的情况下自动选择；存在多个策略时必须填写。",
+    "obvious_hint": true,
+    "default": ""
+  },
+  "attachment_group_name": {
+    "type": "string",
+    "description": "附件分组名称",
+    "hint": "填写 Halo 中已有的附件分组 metadata.name，留空则不指定。",
+    "default": ""
+  },
+  "max_images": {
+    "type": "int",
+    "description": "每条瞬间最多上传的图片数",
+    "default": 9
+  },
+  "max_image_size_mb": {
+    "type": "int",
+    "description": "单张图片大小上限（MB）",
+    "default": 20
+  },
+  "draft_timeout_minutes": {
+    "type": "int",
+    "description": "草稿无操作超时（分钟）",
+    "hint": "超过此时间后，草稿文字和暂存图片会被自动清理。",
+    "default": 30
+  },
+  "request_timeout": {
+    "type": "int",
+    "description": "Halo API 请求超时（秒）",
+    "default": 30
+  },
+  "verify_ssl": {
+    "type": "bool",
+    "description": "校验 HTTPS 证书",
+    "hint": "仅在使用可信内网自签名证书且明确了解风险时关闭。",
+    "default": true
+  },
+  "admin_only": {
+    "type": "bool",
+    "description": "仅允许 AstrBot 管理员发布",
+    "default": true
+  },
+  "allowed_user_ids": {
+    "type": "list",
+    "description": "发布用户 ID 白名单",
+    "hint": "留空表示不额外限制；启用“仅管理员”时仍需同时具备管理员身份。",
+    "default": []
+  }
+}

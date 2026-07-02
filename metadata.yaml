@@ -1,0 +1,7 @@
+name: astrbot_plugin_halo_whisper
+display_name: Halo 瞬间发布
+desc: 通过 AstrBot 将文字和图片发布到 Halo 瞬间。
+version: v1.1.0
+author: MikeYaoyu
+repo: ""
+astrbot_version: ">=4.9.2,<5"
